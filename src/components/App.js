@@ -1,5 +1,7 @@
+import Login from "./Login";
+
 function App() {
-  return "Hello World";
+  return <Login />;
 }
 
 export default App;
