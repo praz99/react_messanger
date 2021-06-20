@@ -1,8 +1,8 @@
-import { useState } from "react";
+import UseLocalStorage from "../hooks/useLocalStorage";
 import Login from "./Login";
 
 function App() {
-  const [id, setId] = useState();
+  const [id, setId] = UseLocalStorage()
   return (
     <>
       {id}
