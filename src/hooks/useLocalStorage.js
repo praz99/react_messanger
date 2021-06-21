@@ -21,7 +21,7 @@ function UseLocalStorage(key, initialValue) {
     localStorage.setItem(prefixedKey, JSON.stringify(value));
   }, [prefixedKey, value])
 
-  return [value, setValue]
+  return [value, setValue];
 }
 
 export default UseLocalStorage;
