@@ -1,11 +1,10 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 
 function Dashboard({ id }) {
   return (
-    <div>
-      {id}
-    </div>
-  )
+    <Sidebar id={id} />
+  );
 }
 
 export default Dashboard;
