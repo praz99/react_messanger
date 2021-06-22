@@ -21,7 +21,7 @@ function Login({ onIdSubmit }) {
           <Form.Label>Enter Your Id</Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>
-        <Button type="submit" className="mr-2">Login</Button>
+        <Button type="submit" className="me-2">Login</Button>
         <Button onClick={createNewId} variant="secondary">Create A New Id</Button>
       </Form>
     </Container>
