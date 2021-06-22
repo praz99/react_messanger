@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tab, Nav } from 'react-bootstrap';
+import { Tab, Nav, Button } from 'react-bootstrap';
 import Conversations from './Conversations';
 import Contacts from './Contacts';
 
@@ -8,6 +8,7 @@ const CONTACTS_KEY = 'contacts';
 
 function Sidebar({ id }) {
   const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY);
+  const conversationsOpen = activeKey === CONVERSATIONS_KEY
   return (
     <div style={{ width: '250px' }} className="d-flex flex-column">
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
@@ -30,6 +31,9 @@ function Sidebar({ id }) {
         <div className="p-2 border-top border-end small">
           Your Id: <span className="text-muted">{id}</span>
         </div>
+        <Button className="rounded-0">
+          New {conversationsOpen ? 'Conversation' : 'Contact'}
+        </Button>
       </Tab.Container >
     </div >
   );
